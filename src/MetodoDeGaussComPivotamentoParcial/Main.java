@@ -3,9 +3,15 @@ package MetodoDeGaussComPivotamentoParcial;
 public class Main {
 	public static void main(String[] args) {
 		
-		int tam = 2;
-		double x[][] = { { 0.004,15.73}, {0.423,-24.72 } }; 
-		double y[] = { 15.77, -20.49 };
+//		Modelo:
+//		dado1 + dado2 - dado3 = resultado
+//		dado1 * dado2 + dado3 = resultado
+//		dado1 / dado2 - dado3 = resultado
+		
+		int tam = 3; //Quantidade de linhas da matriz 'a'
+		double x[][] = { { 0.004,15.73}, {0.423,-24.72 } }; //Matriz que recebe os 'dados'
+		double y[] = { 15.77, -20.49 };// vetor que recebe os 'resultados' 
+		
 
 			
 		EliminacaoGaussPivoParcial pivotamento = new EliminacaoGaussPivoParcial(x, y, tam);
