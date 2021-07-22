@@ -30,18 +30,21 @@ public class EliminacaoGaussPivoParcial {
 				if (Math.abs(x[k][k]) < Math.abs(x[i][k])) {
 					alteraLinha(k, i);
 				}
-				double m = x[i][k] / x[k][k];
+				double fator = x[i][k] / x[k][k];
 				x[i][k] = 0;
 
 				for (int j = (k + 1); j < tam; j++) {
-					x[i][j] = x[i][j] - m * x[k][j];
+					x[i][j] = x[i][j] - fator * x[k][j];
 				}
 
-				y[i] = y[i] - m * y[k];
+				y[i] = y[i] - fator * y[k];
 			}
 		}
 
 	}
+	
+
+
 	
 	public void imprimeMatriz() {
 		System.out.println("");

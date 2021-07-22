@@ -4,7 +4,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		int tam = 2;
-		double x[][] = { { 0.004,15.73}, { 0.423,-24.72 } }; 
+		double x[][] = { { 0.004,15.73}, {0.423,-24.72 } }; 
 		double y[] = { 15.77, -20.49 };
 
 			
