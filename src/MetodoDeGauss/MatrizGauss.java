@@ -11,19 +11,18 @@ public class MatrizGauss {
 
 		this.tamanho = tamanho;
 
-		for (int i = 0; i < tamanho; i++) {	// Coleta de dados para preencher a matriz
+		for (int i = 0; i < tamanho; i++) { // Coleta de dados para preencher a matriz
 			for (int j = 0; j <= tamanho; j++) {
 				System.out.print("Digite [" + i + ", " + j + "]: ");
 				matriz[i][j] = sc.nextDouble();
 			}
 		}
-		
+
 		System.out.println("\n\n\t Matriz Original!");
 		imprimeMatriz();
 
-		
-		eliminacaPorgreciva();		// ELIMINACAO PROGRESSIVA
-		
+		eliminacaPorgreciva(); // ELIMINACAO PROGRESSIVA
+
 		System.out.println("\n\t Matriz de Gauss!");
 		imprimeMatriz();
 
@@ -41,10 +40,10 @@ public class MatrizGauss {
 
 	public void eliminacaPorgreciva() {
 		double fator;
-		for (int k = 0; k < tamanho - 1; k++) {//Coluna pivo que se altera.
-			for (int i = (k + 1); i < tamanho; i++) {//Linhas que sofrerao as eliminacoes.
-				fator = matriz[i][k] / matriz[k][k];//Fator que sera multiplicado pela linha pivo
-				for (int j = 0; j <= tamanho; j++) {//Cada coluna da linha que sofrerao modificacoes da linha i
+		for (int k = 0; k < tamanho - 1; k++) {// Coluna pivo que se altera.
+			for (int i = (k + 1); i < tamanho; i++) {// Linhas que sofrerao as eliminacoes.
+				fator = matriz[i][k] / matriz[k][k];// Fator que sera multiplicado pela linha pivo
+				for (int j = 0; j <= tamanho; j++) {// Cada coluna da linha que sofrerao modificacoes da linha i
 					matriz[i][j] = matriz[i][j] - fator * matriz[k][j];
 				}
 			}
